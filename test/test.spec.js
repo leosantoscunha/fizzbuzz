@@ -3,11 +3,13 @@ import { Chance } from "chance";
 import { expect } from "chai";
 import { fizzbuzz } from "../src/index";
 
-describe("FizzBuzz", () => {
+describe("FizzBuzz Test", () => {
   it("Should return Fizz to number multiples of 3", (done) => {
-    for (let index = 0; index < 100; index++) {
+    for (let index = 1; index <= 100; index++) {
       const print = fizzbuzz(index);
-      expect(print).to.be.equal('Fizz');
+      if (!(index % 3)) {
+        expect(print).to.be.equal('Fizz');
+      }
     }
     done();
   });
