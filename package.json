@@ -6,6 +6,7 @@
   "scripts": {
     "compile": "babel src -d lib",
     "prepublish": "npm run compile",
+    "start": "node ./lib/index.js",
     "test": "mocha"
   },
   "directories": {
